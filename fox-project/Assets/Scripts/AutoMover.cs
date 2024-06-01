@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class AutoMover : MonoBehaviour
 {
-    public EagleController2D eagleController;
-    public float moveSpeed = 1f;  
-    public float changeDirectionTime = 2f;  
+    public float moveSpeed = 1f;  // Velocidade do movimento
+    public float changeDirectionTime = 2f;  // Tempo para mudar de direção
 
+    private Rigidbody2D m_Rigidbody2D;
     private float timer;
     private float direction = 1f;
+    private bool m_FacingRight = true;
+
+    private void Awake()
+    {
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
@@ -17,10 +23,21 @@ public class AutoMover : MonoBehaviour
 
         if (timer >= changeDirectionTime)
         {
-            direction *= -1;  
+            direction *= -1;  // Inverte a direção
             timer = 0f;  
+            Flip();
         }
 
-        eagleController.Move(direction * moveSpeed * Time.deltaTime, false, false);
+        Vector2 targetVelocity = new Vector2(direction * moveSpeed, m_Rigidbody2D.velocity.y);
+        m_Rigidbody2D.velocity = targetVelocity;
+    }
+
+    private void Flip()
+    {
+        m_FacingRight = !m_FacingRight;
+
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
