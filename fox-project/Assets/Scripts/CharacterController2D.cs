@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-	[SerializeField] private float m_JumpForce = 700f;							
+	[SerializeField] private float m_JumpForce = 200f;							
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	
 	[SerializeField] private bool m_AirControl = false;							
