@@ -7665,6 +7665,7 @@ GameObject:
   - component: {fileID: 2117427338}
   - component: {fileID: 2117427337}
   - component: {fileID: 2117427340}
+  - component: {fileID: 2117427341}
   m_Layer: 0
   m_Name: frog-idle-1
   m_TagString: Untagged
@@ -7860,6 +7861,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &2117427341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117427333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea71ac1f71794a3eb4db65a3c11bd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: Fase1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
