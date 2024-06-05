@@ -762,4 +762,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Fase1.unity
   - Assets/Fase2.unity
-  playerPath: /Users/desenvolvedor/Documents/GitHub/fox-project/fox-project/JogoDaRaposa.app
+  playerPath: /Users/desenvolvedor/Documents/JogoDaRaposa.app
